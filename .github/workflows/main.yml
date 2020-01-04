@@ -13,4 +13,7 @@ jobs:
       # includes a new variable of npm with a value of 2 for the matrix leg matching the os and version
           - os: windows-latest
             node: 4
-            npm: 2        
+            npm: 2   
+    steps:
+           - name: build
+             run: pwd   

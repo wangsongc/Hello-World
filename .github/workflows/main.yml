@@ -13,12 +13,12 @@ jobs:
       # includes a new variable of npm with a value of 2 for the matrix leg matching the os and version
           - os: ubuntu-18.04
             node: 4
-            npm: 2  
+            npm: "abc"  
         exclude:
           - os: ubuntu-18.04
             node: 8
     steps:
            - name: build
              run: pwd
-             if: matrix.npm==2
+             if: matrix.npm=="abc"
                 

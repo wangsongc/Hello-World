@@ -20,4 +20,4 @@ jobs:
     steps:
            - name: build
              run: pwd
-             if: matrix.npm==abc               
+             if: matrix.npm=='abc'               

@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-18.04]
+        node: [4, 6, 8, 10]
+        include:
+      # includes a new variable of npm with a value of 2 for the matrix leg matching the os and version
+          - os: windows-latest
+            node: 4
+            npm: 2        

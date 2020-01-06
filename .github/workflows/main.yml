@@ -8,7 +8,21 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-18.04]
-        node: [4, 6, 8, 10]
+        node: [4, 6, 8]
+        include:
+      # includes a new variable of npm with a value of 2 for the matrix leg matching the os and version
+          - os: ubuntu-18.04
+            node: 4
+            npm: abc
+        exclude:
+          - os: ubuntu-18.04
+            node: 8
+  build1:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-16.04]
+        node: [4, 6, 8]
         include:
       # includes a new variable of npm with a value of 2 for the matrix leg matching the os and version
           - os: ubuntu-18.04

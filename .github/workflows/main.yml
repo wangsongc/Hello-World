@@ -17,6 +17,10 @@ jobs:
         exclude:
           - os: ubuntu-18.04
             node: 8
+    steps:
+           - name: build
+             run: pwd
+             if: matrix.npm=='abc'
   build1:
     runs-on: ${{ matrix.os }}
     strategy:

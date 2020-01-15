@@ -54,7 +54,8 @@ jobs:
            - name: Cache
              uses: actions/cache@v1.1.0
              with:
-              # A directory to store and save the cache
+              # A directory to store and save the cache  D:\a\Hellow-World\Hellow-World
                path: ./
+               key: build
 
 

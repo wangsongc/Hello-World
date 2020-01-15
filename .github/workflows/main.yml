@@ -49,6 +49,7 @@ jobs:
            - name: build
              shell: powershell
              run: |
+               $env:PATH="C:\windows\system32;$env:PATH"
                echo $env:PATH
                pwd
            - name: Cache

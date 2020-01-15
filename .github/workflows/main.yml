@@ -21,7 +21,7 @@ jobs:
            - name: build
              shell: powershell
              run: |
-               md build
+               md build 2> $null
                
 
 

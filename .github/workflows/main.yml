@@ -21,7 +21,9 @@ jobs:
            - name: build
              shell: powershell
              run: |
-               md build 1> $null
+               if(-not (Test-Path -Path "./build")){
+                mkdir build 2> $null
+               }
                
 
 

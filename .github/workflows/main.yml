@@ -2,43 +2,7 @@ name: CI
 
 on: [push]
 
-jobs:
-#   ubuntu-18.04:
-#     runs-on: ${{ matrix.os }}
-#     strategy:
-#       matrix:
-#         os: [ubuntu-18.04]
-#         node: [4, 6, 8]
-#         include:
-#       # includes a new variable of npm with a value of 2 for the matrix leg matching the os and version
-#           - os: ubuntu-18.04
-#             node: 4
-#             npm: abc
-#         exclude:
-#           - os: ubuntu-18.04
-#             node: 8
-#     steps:
-#            - name: build
-#              run: pwd
-#              if: matrix.npm=='abc'
-#   ubuntu-16.04:
-#     runs-on: ${{ matrix.os }}
-#     strategy:
-#       matrix:
-#         os: [ubuntu-16.04]
-#         node: [4, 6, 8]
-#         include:
-#       # includes a new variable of npm with a value of 2 for the matrix leg matching the os and version
-#           - os: ubuntu-18.04
-#             node: 4
-#             npm: abc
-#         exclude:
-#           - os: ubuntu-18.04
-#             node: 8
-#     steps:
-#            - name: build
-#              run: pwd
-#              if: matrix.npm=='abc'    
+jobs: 
   cache-v1_0_3:
     runs-on: ${{ matrix.os }}
     strategy:

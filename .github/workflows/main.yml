@@ -53,7 +53,7 @@ jobs:
                echo $env:PATH
                pwd
            - name: Cache
-             uses: actions/cache@master
+             uses: actions/cache@v1.0.3
              with:
               # A directory to store and save the cache  D:\a\Hellow-World\Hellow-World
                path: ./

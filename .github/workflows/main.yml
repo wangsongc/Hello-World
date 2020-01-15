@@ -50,5 +50,11 @@ jobs:
              shell: powershell
              run: |
                echo $env:PATH
-               
-        
+               pwd
+           - name: Cache
+             uses: actions/cache@v1.1.0
+             with:
+              # A directory to store and save the cache
+               path: ./
+
+

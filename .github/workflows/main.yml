@@ -39,7 +39,7 @@ jobs:
 #            - name: build
 #              run: pwd
 #              if: matrix.npm=='abc'    
-  windows:
+  cache-v1.0.3:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -54,11 +54,22 @@ jobs:
              uses: actions/cache@v1.0.3
              with:
                path: ./
-               key: build-v1.0.3
-#            - name: Cache with v1.1.1
-#              uses: actions/cache@v1.1.1
-#              with:
-#               path: ./
-#               key: build-v1.1.1
+               key: cache-v1.0.3
 
+  cache-v1.1.0:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2016]
+
+    steps:
+           - name: build
+             shell: powershell
+             run: |
+               echo $env:PATH
+           - name: Cache with v1.1.0
+             uses: actions/cache@v1.1.0
+             with:
+               path: ./
+               key: cache-v1.1.0
 

@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on: 
+  push:
+    branches:
+    - powershell
 
 jobs: 
   cache-v1_0_3:
@@ -10,30 +13,16 @@ jobs:
         os: [windows-2016]
 
     steps:
-           - name: build
-             shell: powershell
-             run: |
-               echo $env:PATH
            - name: Cache with v1.0.3
              uses: actions/cache@v1.0.3
              with:
-               path: ./
-               key: cache-v1.0.3
-
-  cache-v1_1_0:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-2016]
-
-    steps:
+               path: build
+               key: build-1
            - name: build
              shell: powershell
              run: |
-               echo $env:PATH
-           - name: Cache with v1.1.0
-             uses: actions/cache@v1.1.0
-             with:
-               path: ./
-               key: cache-v1.1.0
+               md build
+               
+
+
 

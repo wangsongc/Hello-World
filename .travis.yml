@@ -1,0 +1,15 @@
+language: c
+
+arch:
+    - arm64
+    - amd64
+
+compiler:
+    - clang
+    - gcc
+
+script:
+    - pwd
+    - uname -a
+
+

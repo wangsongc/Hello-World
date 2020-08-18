@@ -1,15 +1,25 @@
-language: c
+# language: c
 
-arch:
-    - arm64
-    - amd64
+# arch:
+#     - arm64
+#     - amd64
 
-compiler:
-    - clang
-    - gcc
+# compiler:
+#     - clang
+#     - gcc
 
-script:
-    - pwd
-    - uname -a
+# script:
+#     - pwd
+#     - uname -a
 
+
+language: go
+go:
+  - "1.11"
+  - "1.12"
+  - "1.13"
+before_install:
+  - go get github.com/xeipuuv/gojsonreference
+  - go get github.com/xeipuuv/gojsonpointer
+  - go get github.com/stretchr/testify/assert
 
